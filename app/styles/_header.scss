@@ -1,0 +1,155 @@
+header {
+	position: relative;
+}
+
+/* *** Top header *** */
+.top-header {
+	padding: 40px 0;
+	.logo {
+		text-align: center;
+		margin-bottom: 20px;
+		display: none;
+	}
+}
+
+.top-header-find {
+	input {
+		width: 200px;
+		height: 40px;
+		border-radius: 5px;
+		padding: 0 26px 0 10px;
+		background: url('../images/find.png') $bg-grey no-repeat 95% 50%;
+		font-family: Geometria;
+		font-size: 1.2em;
+	}
+}
+
+.top-header-dowload {
+	a {
+		display: block;
+		@include buttons ($accent-color, transparent, transparent, '../images/arrow.png');
+		padding: 10px 15px 10px 35px;
+		background-position: 10% 48%;
+		&:hover {
+			@include buttons-hover ($accent-color, transparent, $accent-color);
+		}
+	}
+}
+
+.top-header-cart {
+	position: relative;
+	padding-left: 40px;
+	font-family: Geometria;
+	font-size: 1.4em;
+	i {
+		position: absolute;
+		left: 0;
+		top: -7px;
+	}
+	& > span {
+		position: absolute;
+		left: 13px;
+		top: -17px;
+		font-size: 12px;
+		font-family: GeometriaMedium;
+		background-color: $accent-color;
+		color: #fff;
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		line-height: 20px;
+		border-radius: 50%;
+	}
+	p {
+		font-family: GeometriaMedium;
+		span {
+			color: $accent-color;
+			font-family: GeometriaBold;
+		}
+		&:last-child {
+			margin-top: 10px;
+		}
+	}
+}
+
+.top-header-phone {
+	position: relative;
+	p {
+		font-family: GeometriaMedium;
+		font-size: 3em;
+		padding-left: 70px;
+	}
+	&::before {
+		position: absolute;
+		content: '8 (495)';
+		bottom: 4px;
+		left: 0;
+		font-size: 1.8em;
+		font-family: GeometriaMedium;
+		color: $accent-color;
+	}
+}
+
+.top-header-send {
+	a {
+		display: block;
+		@include buttons ($accent-color, transparent, $accent-color, '');
+		padding: 10px 25px;
+		&:hover {
+			@include buttons-hover ($accent-black, $accent-color, $accent-color);
+		}
+	}
+}
+
+.mob-menu-btn {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 26px;
+	cursor: pointer;
+	display: none;
+}
+
+/* *** Bottom header *** */
+.bottom-header {
+	border-top: 1px solid #eee;
+	//position: relative;
+	.logo {
+		position: absolute;
+		left: calc(50% - 269px / 2);
+		bottom: -36px;
+		z-index: 1000;
+	}
+}
+
+.menu {
+	/*display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;*/
+	display: block;
+	a {
+		display: inline-block;
+		font-family: GeometriaMedium;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		letter-spacing: .025em;
+		padding: 30px 0;
+		margin-top: -1px;
+		border-top: 3px solid transparent;
+		margin-right: 89px;
+		&:nth-child(3) {
+			margin-right: 160px;
+		}
+		&:nth-child(4) {
+			margin-left: 160px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			border-top: 3px solid $accent-color;
+			color: $accent-color;
+		}
+	}
+}

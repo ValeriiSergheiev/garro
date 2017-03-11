@@ -1,0 +1,98 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+    .flex-wrapper {
+        justify-content: center;
+    }
+
+    .top-header {
+        .flex-item {
+            margin: 10px 20px;
+        }
+    }
+
+    .menu {
+        a {
+            margin-right: 32px;
+        }
+    }
+
+}
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+        .top-header {
+            .logo {
+                display: block;
+            }
+        }
+
+        .bottom-header {
+            border-top: none;
+            .logo {
+                display: none;
+            }
+            .menu {
+                display: none;
+                position: absolute;
+                top: 55px;
+                right: 15px;
+                text-align: center;
+                background-color: $accent-color;
+                z-index: 1000;
+                a {
+                    display: block;
+                    border-top: none;
+                    margin: 0;
+                    padding: 15px 50px;
+                    border-bottom: 1px solid #eee;
+                    &:hover {
+                        color: lighten($accent-black, 20%);
+                    }
+                }
+            }
+        }
+
+        .mob-menu-btn {
+            display: block;
+        }
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+        .section-title-center {
+            h2 {
+                font-size: 3em;
+            }
+        }
+
+        .footwear-select {
+            text-align: center;
+            margin-top: 30px;
+            h4 {
+                &::after {
+                    left: calc(50% - 45px / 2);
+                }
+            }
+        }
+
+        .footwear-item {
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }

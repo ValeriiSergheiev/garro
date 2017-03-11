@@ -1,0 +1,115 @@
+/* *** Section-1 *** */
+.slider-main-item {
+	
+}
+
+/* *** Section Production *** */
+#production {
+	padding: 80px 0;
+	box-shadow: $section-shadow;
+}
+
+/* *** Section Catalog *** */
+.catalog {
+	box-shadow: $section-shadow;
+}
+
+.footwear-item {
+	position: relative;
+	background-color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 55px;
+	p {
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		letter-spacing: .1em;
+		margin-bottom: 5px;
+	}
+	h5 {
+		font-family: GeometriaMedium;
+		font-size: 30px;
+		margin: 35px 0 25px;
+		span {
+			font-family: GeometriaLight;
+			font-size: 14px;
+		}
+	}
+	& > a {
+		display: inline-block;
+		@include buttons ($accent-color, transparent, $accent-color, '../images/cart.png');
+		padding: 15px 50px 15px 85px;
+		background-position: 30% 45%;
+		margin-bottom: 40px;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	& div:last-child {
+		display: none;
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		padding-bottom: 30px;
+		background-color: #fff;
+	}
+	&:hover div:last-child {
+		display: block;
+	}
+}
+
+.footwear-img-wrapper {
+	height: 220px;
+	line-height: 220px;
+	vertical-align: middle;
+}
+
+.footwear-select {
+	text-align: left;
+	text-transform: uppercase;
+	font-family: GeometriaMedium;
+	letter-spacing: .1em;
+	color: #222;
+	margin-top: 55px;
+	h4 {
+		font-size: 18px;
+		position: relative;
+		margin-bottom: 15px;
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -15px;
+			left: 0;
+			height: 2px;
+			width: 45px;
+			background-color: $accent-color;
+		}
+	}
+}
+
+.footwear-select-list {
+	margin: 45px 0 30px;
+	li {
+		list-style-type: none;
+		font-size: 12px;
+		cursor: pointer;
+		margin: 30px 0;
+		&:hover {
+			color: $accent-color;
+		}
+		&:focus {
+			color: $accent-color;
+		}
+	}
+}
+
+/* *** Section Production *** */
+.production-2-left {
+	height: 100px;
+	background-color: red;
+}
+
+.production-2-right {
+	text-align: center;
+}
