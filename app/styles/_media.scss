@@ -1,4 +1,16 @@
 /* Large Devices, Wide Screens */
+
+/* Custom */ 
+@media only screen and (max-width : 1400px) {
+
+    .slider-text {
+        top: 70px;
+        font-size: 8px;
+    }
+
+
+}
+
 @media only screen and (max-width : 1200px) {
 
     .flex-wrapper {
@@ -14,6 +26,21 @@
     .menu {
         a {
             margin-right: 32px;
+        }
+    }
+
+    .slider-text {
+        top: 50px;
+        font-size: 7px;
+        p {
+            padding: 10px 0;
+            line-height: 1.2;
+        }
+    }
+
+    .sales-icons-item {
+        p {
+            font-size: 10px;
         }
     }
 
@@ -58,7 +85,29 @@
             display: block;
         }
 
+        .slideshow {
+           margin: 0 auto;
+       }
+
+       .production-2-text {
+        article {
+            margin-bottom: 50px;
+            text-align: justify;
+        }
     }
+
+    .slider-text {
+        top: 40px;
+        a {
+            padding: 12px 30px;
+        }
+    }
+
+    .footer-info {
+        margin-top: 30px;
+    }
+
+}
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
@@ -85,10 +134,60 @@
             margin-right: auto;
         }
 
+        #section-1 {
+            display: none;
+        }
+
+        .footweat-type-btn {
+            background-color: #fff;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 10px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                border: 2px solid $accent-color;
+                border-radius: 5px;
+            }
+        }
+
+        .sales-icons-item {
+           p {
+            font-size: 14px;
+        }
     }
+
+    .footer-nav {
+        h6 {
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    .news-right ul li a {
+        line-height: 1.4;
+    }
+    
+    footer {
+        padding: 20px 0 40px;
+    }
+
+}
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
+
+        .icon-item {
+            p {
+                font-size: 11px;
+                letter-spacing: normal;
+            }
+        }
+
+        .footweat-type-btn p {
+            margin-top: 15px;
+        }
 
     }
 

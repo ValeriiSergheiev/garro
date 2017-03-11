@@ -1,0 +1,51 @@
+footer {
+	padding: 80px 0 180px;
+	background-image: url('../images/section-bg.jpg');
+	background-size: cover;
+}
+
+.footer-nav {
+	h6 {
+		font-family: GeometriaMedium;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: .025em;
+		color: $accent-color;
+		margin-bottom: 10px;
+	}
+	li {
+		list-style-type: none;
+		padding: 13px 0;
+		a {
+			font-family: GeometriaMedium;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: .025em;
+			line-height: 1.4;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+.footer-info {
+	text-align: center;
+	p {
+		font-family: GeometriaMedium;
+		font-size: 30px;
+		margin: 30px 0;
+		span {
+			font-size: 18px;
+			color: $accent-color;
+		}
+	}
+	a:last-child {
+		display: inline-block;
+		padding: 10px 25px;
+		@include buttons ($accent-color, transparent, $accent-color, '');
+		&:hover {
+			@include buttons-hover ($accent-black, $accent-color, $accent-color);
+		}
+	}
+}

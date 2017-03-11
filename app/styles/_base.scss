@@ -1,6 +1,83 @@
 /* *** Section-1 *** */
 .slider-main-item {
-	
+	position: relative;
+}
+
+.slider-text {
+	position: absolute;
+	max-width: calc(1170px / 2);
+	top: 100px;
+	left: 50%;
+	p {
+		font-size: 1.6em;
+		line-height: 30px;
+		padding: 30px 0;
+	}
+}
+
+.slider-text-bottom {
+	h3 {
+		float: left;
+		font-size: 4.8em;
+		margin-top: 10px;
+		span {
+			font-size: .7em;
+			font-family: GeometriaLight;
+		}
+	}
+	a {
+		display: block;
+		float: right;
+		margin-right: 15px;
+		@include buttons ($accent-black, $accent-color, $accent-color, '');
+		padding: 18px 50px;
+		font-size: 1.4em;
+		&:hover {
+			@include buttons-hover ($accent-black, transparent, $accent-color);
+		}
+	}
+}
+
+/* *** Section Footwear type *** */
+.footweat-type-btn {
+	display: block;
+	position: relative;
+	margin: 0 -15px;
+	p {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: GeometriaMedium;
+		font-size: 14px;
+		letter-spacing: .1em;
+		margin-top: 30px;
+	}
+	&:hover {
+		color: $accent-black;
+	}
+	&:hover::before {
+		position: absolute;
+		content: '';
+		top: 10px;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		border: 2px solid $accent-color;
+		border-radius: 5px;
+	}
+}
+
+.footweat-type-btn-logo {
+	position: relative;
+	height: 60%;
+	img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 17%;
+		height: auto;
+	}
 }
 
 /* *** Section Production *** */
@@ -106,10 +183,179 @@
 
 /* *** Section Production *** */
 .production-2-left {
-	height: 100px;
-	background-color: red;
+	
+}
+
+.slideshow {
+	max-width: 550px;
+}
+
+.slideshow-display {
+	max-width: 550px;
+	max-height: 335px;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.slideshow-list {
+	text-align: justify;
+	max-width: 550px;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 0;
+	}
+	li {
+		display: inline-block;
+		max-height: 105px;
+		list-style-type: none;
+		overflow: hidden;
+		border-radius: 5px;
+		margin-bottom: 15px;
+		a {
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.production-2-text {
+	article {
+		font-size: 16px;
+		font-family: Geometria;
+		line-height: 30px;
+		text-align: left;
+		&:first-child {
+			margin-bottom: 50px;
+		}
+	}
 }
 
 .production-2-right {
 	text-align: center;
+}
+
+/* *** Section sales *** */
+#sales {
+	background-image: url('../images/section-bg.jpg');
+	background-repeat: cover;
+	padding: 60px 0 40px;
+}
+
+.sales-icons-item {
+	margin-top: 45px;
+	max-width: 290px;
+	img {
+		width: 89px;
+		height: 89px;
+		margin-right: 10px;
+	}
+	p {
+		font-family: GeometriaMedium;
+		font-size: 14px;
+		letter-spacing: .025em;
+		line-height: 18px;
+		text-transform: uppercase;
+		span {
+			font-size: 30px;
+		}
+	}
+}
+
+.sales-info {
+	margin-top: 60px;
+	p {
+		margin-bottom: 50px;
+		font-size: 16px;
+		line-height: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sales-price {
+	margin-top: 60px;
+	padding: 50px;
+	background-color: #fff;
+	max-width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+	h5 {
+		font-family: GeometriaMedium;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	span {
+		font-family: GeometriaLight;
+		font-size: 36px;
+	}
+	a {
+		display: block;
+		padding: 10px 0;
+		width: 200px;
+		text-align: center;
+		margin-bottom: 40px;
+		@include buttons ($accent-color, transparent, $accent-color, '');
+		&:hover {
+			@include buttons-hover ($accent-black, $accent-color, $accent-color);
+		}
+		&:last-child {
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* ***  Section news *** */
+#news {
+	padding: 60px 0 140px;
+}
+
+.news-left {
+	text-align: center;
+	padding: 110px 40px;
+	h5 {
+		font-family: GeometriaMedium;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+	a {
+		padding: 10px 50px;
+		display: inline-block;
+		@include buttons ($accent-color, transparent, $accent-color, '');
+		&:hover {
+			@include buttons-hover ($accent-black, $accent-color, $accent-color);
+		}
+	}
+}
+
+.news-right {
+	ul {
+		margin-bottom: 20px;
+		li {
+			list-style-type: none;
+			padding: 15px 0;
+			border-bottom: 1px solid #eee;
+			a {
+				font-family: GeometriaMedium;
+				text-transform: uppercase;
+				font-size: 18px;
+				&:hover {
+					opacity: .8;
+					color: inherit;
+				}
+			}
+		}
+	}
 }

@@ -54,6 +54,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 80px;
 }
 
+.divider-80 {
+	height: 80px;
+}
+
 .flex-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -79,6 +83,19 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 4.8em;
 		line-height: 1.4;
 		margin-bottom: 38px;
+	}
+}
+
+.section-title-left {
+	@extend .section-title-center;
+	&::after {
+		left: 0;
+		bottom: -30px;
+	}
+	h2 {
+		line-height: 1;
+		text-align-last: left;
+		margin-bottom: 30px;
 	}
 }
 
@@ -141,6 +158,21 @@ h1, h2, h3, h4, h5, h6 {
 		&[data-color="gold"] {
 			background-color: $accent-color;
 			margin-right: 0;
+		}
+	}
+}
+
+.show-all {
+	a {
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		&:hover {
+			color: $accent-color;
+		}
+		span {
+			color: $accent-color;
 		}
 	}
 }
