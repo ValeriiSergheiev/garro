@@ -858,3 +858,26 @@
 	}
 }
 
+// Single Post Page ****************
+#single-post {
+	padding-bottom: 70px;
+}
+
+.single-post {
+	margin-top: 40px;
+	img {
+		float: left;
+		margin: 0 60px 60px 0;
+	}
+	p {
+		font-family: Geometria;
+		font-size: 16px;
+		line-height: 30px;
+		color: #343434;
+		text-align: justify;
+		margin-bottom: 45px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
