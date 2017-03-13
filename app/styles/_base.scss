@@ -886,3 +886,43 @@
 #cart-section {
 	@extend #single-product;
 }
+
+//Posts page ***********************
+#posts {
+	padding-bottom: 55px;
+}
+
+.posts {
+	margin-top: 40px;
+	text-align: center;
+	a {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 20px;
+		&:hover::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: $accent-color;
+			opacity: .7;
+		}
+		p {
+			position: absolute;
+			top: 40%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			max-width: 80%;
+			font-family: GeometriaMedium;
+			font-size: 18px;
+			letter-spacing: .1em;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1.4;
+		}
+	}
+}
