@@ -699,3 +699,162 @@
 		border: 1px solid $accent-color !important;
 	}
 }
+
+// Product Page *********************
+#section-breadcrumb {
+	padding-top: 60px;
+}
+
+/* ***  Single Product Section *** */
+#single-product {
+	padding-bottom: 80px;
+}
+
+.single-product-image {
+	position: relative;
+	max-width: 530px;
+	height: 470px;
+	border: 1px solid $border-color;
+	border-radius: 5px;
+	img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.single-product-detail {
+	margin-top: 25px;
+}
+
+.single-product-price {
+	border-bottom: 1px solid $border-color;
+	padding-bottom: 30px;
+	h3 {
+		float: left;
+		position: relative;
+		font-family: GeometriaMedium;
+		font-size: 36px;
+		color: #222;
+		&::after {
+			position: absolute;
+			content: 'руб';
+			bottom: 6px;
+			right: -33px;
+			font-family: Geometria;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		span {
+			text-decoration: line-through;
+			font-family: GeometriaMedium;
+			font-size: 14px;
+			color: $accent-color;
+		}
+	}
+	a {
+		display: inline-block;
+		margin-left: 50px;
+		margin-top: -7px;
+		@include buttons ($accent-color, transparent, $accent-color, '../images/cart.png');
+		padding: 15px 50px 15px 85px;
+		background-position: 30% 45%;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
+.single-product-size {
+	border-bottom: 1px solid $border-color;
+	padding: 30px 0;
+	h6 {
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		letter-spacing: .025em;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	.footwear-detail-content {
+		display: block;
+		padding: 0;
+		ul li {
+			margin-right: 8px;
+		}
+	}
+}
+
+.single-product-color {
+	padding: 30px 0;
+	h6 {
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		letter-spacing: .025em;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+}
+
+.product-slider {
+	margin: 0 100px;
+	.slick-prev {
+		width: 30px;
+		height: 50px;
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -70px;
+		margin: auto;
+		&::before {
+			position: absolute;
+			content: "";
+			top: 8px;
+			left: 10px;
+			border: solid $accent-color;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 15px;
+			transform: rotate(135deg)
+		}
+	}
+	.slick-next {
+		width: 30px;
+		height: 50px;
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -70px;
+		margin: auto;
+		&::before {
+			position: absolute;
+			content: "";
+			top: 8px;
+			right: 10px;
+			border: solid $accent-color;
+			border-width: 0 3px 3px 0;
+			display: inline-block;
+			padding: 15px;
+			transform: rotate(-45deg)
+		}
+	}
+}
+
+/* ***  See Also Section *** */
+#see-also {
+	padding: 80px 0;
+	.footwear-item-border {
+		margin-bottom: 0;
+		margin-top: 20px;
+		&:hover {
+			border: 1px solid #eaeaea;
+		}
+	}
+}
+

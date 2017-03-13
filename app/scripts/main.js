@@ -29,11 +29,46 @@ $(document).ready(function() {
 		});
 	}
 
-	//Slider
+	//Slider Main
 	$('.slider-main').slick({
 		dots: false,
 		arrows: false,
 		autoplay: true
+	});
+
+	//Slider Product
+	$('.product-slider').slick({
+		dots: false,
+		autoplay: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
+		responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
 	});
 
 	//Menu active item

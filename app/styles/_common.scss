@@ -116,6 +116,13 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.section-title-simple-small {
+	@extend .section-title-simple;
+	h2 {
+		font-size: 36px;
+	}
+}
+
 .active-menu-item {
 	color: $accent-color;
 }

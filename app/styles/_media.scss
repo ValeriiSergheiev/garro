@@ -146,6 +146,14 @@
         }
     }
 
+
+    .single-product-price {
+        h3 {
+            //float: none;
+            margin-bottom: 20px;
+        }
+    }
+
 }
 
     /* Small Devices, Tablets */
@@ -224,6 +232,10 @@
         margin-top: -50px;
     }
 
+    .single-product-image {
+        margin: 0 auto;
+    }
+
 }
 
     /* Extra Small Devices, Phones */ 
@@ -246,6 +258,11 @@
                 margin-bottom: 10px;
                 max-width: 120px;
             }
+        }
+
+        .section-title-simple h2 {
+            font-size: 24px;
+            text-align: center;
         }
 
     }
