@@ -88,4 +88,48 @@ $(document).ready(function() {
 		};
 	});
 
+	//Range Slider UI
+	$( function() {
+		$( '#slider-range' ).slider({
+			range: true,
+			min: 1000,
+			max: 100000,
+			values: [ 15000, 56000 ],
+			slide: function( event, ui ) {
+				$( '#amount-1' ).val(ui.values[ 0 ]);
+				$( '#amount-2' ).val(ui.values[ 1 ]);
+				//$( '.test' ).text(ui.values[ 0 ]);
+			}
+		});
+		$( '#amount-1' ).val($( '#slider-range' ).slider( 'values', 0 ));
+		$( '#amount-2' ).val($( '#slider-range' ).slider( 'values', 1 ));
+	} );
+
+	//Accordion
+	$('.footwear-detail-collapse a').click(function(event) {
+		event.preventDefault();
+		$(this).siblings('.footwear-detail-content').slideToggle('fast');
+		$(this).find('span').toggleClass('rotate-180');
+	});
+
+	//Select Size
+	$('.select-size li').click(function() {
+		$(this).toggleClass('size-active').siblings().removeClass('size-active');
+	});
+
+	//Sort by
+	$('.sort-by a').click(function(event) {
+		event.preventDefault();
+	});
+
+	//Show by
+	$('.show-by ul li').click(function() {
+		$(this).addClass('show-by-active').siblings().removeClass('show-by-active');
+	});
+
+	//Pagination
+	$('.site-pagination li').click(function() {
+		$(this).addClass('pagination-active').siblings().removeClass('pagination-active');
+	});
+
 });

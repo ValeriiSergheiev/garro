@@ -31,10 +31,17 @@ a {
 	}
 }
 
+span:focus {
+	outline: none;
+}
+
 input {
 	border: 0;
 	margin: 0;
 	padding: 0;
+	&[type="checkbox"]:focus {
+		outline: none;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +106,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.section-title-simple {
+	h2 {
+		text-transform: uppercase;
+		font-family: GeometriaLight;
+		font-size: 4.8em;
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+}
+
 .active-menu-item {
 	color: $accent-color;
 }
@@ -117,11 +134,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-lighten {
-	background-color: #f5f5f5;
+	background-color: #FCFCFC;
 }
 
 .bg-darken {
-	background-color: #f1f1f1;
+	background-color: #F6F6F6;
 }
 
 .like {
@@ -175,6 +192,10 @@ h1, h2, h3, h4, h5, h6 {
 			color: $accent-color;
 		}
 	}
+}
+
+.rotate-180 {
+	transform: rotate(-135deg) !important;
 }
 
 //Sprites

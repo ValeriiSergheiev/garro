@@ -97,6 +97,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 55px;
+	border-radius: 5px;
 	p {
 		font-family: GeometriaMedium;
 		font-size: 12px;
@@ -133,6 +134,9 @@
 	}
 	&:hover div:last-child {
 		display: block;
+	}
+	&:hover {
+		box-shadow: 0 0 25px #e1e1e1;
 	}
 }
 
@@ -203,7 +207,7 @@
 }
 
 .slideshow-list {
-	text-align: justify;
+	//text-align: justify;
 	max-width: 550px;
 	&:after {
 		content: "";
@@ -212,12 +216,18 @@
 		height: 0;
 	}
 	li {
-		display: inline-block;
+		//display: inline-block;
+		display: block;
+		float: left;
 		max-height: 105px;
 		list-style-type: none;
 		overflow: hidden;
 		border-radius: 5px;
 		margin-bottom: 15px;
+		margin-right: 15px;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 		a {
 			display: block;
 			img {
@@ -357,5 +367,335 @@
 				}
 			}
 		}
+	}
+}
+
+// Страница КАТАЛОГ 
+.catalog-select {
+	padding: 60px 0;
+	box-shadow: $section-shadow;
+}
+
+.section-breadcrumb {
+	.breadcrumb {
+		background-color: transparent;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 10px;
+		li {
+			font-family: Geometria;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: .025em;
+			color: #a8a8a8;
+			margin-bottom: 10px;
+			& + li::before {
+				content: "- ";
+				padding: 0 5px;
+				color: #a8a8a8;
+			}
+			a {
+				color: #a8a8a8;
+			}
+		}
+	}
+}
+
+.sort-by {
+	margin-top: 50px;
+	margin-bottom: 25px;
+	a {
+		position: relative;
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: .025em;
+		margin-right: 35px;
+		&:hover {
+			color: $accent-color;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0px;
+			right: -15px;
+			border: solid $accent-color;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.show-by {
+	margin-top: 50px;
+	span {
+		float: left;
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: .025em;
+	}
+	ul {
+		float: right;
+		li {
+			list-style-type: none;
+			display: block;
+			float: left;
+			margin-left: 5px;
+			margin-top: -9px;
+			font-family: Geometria;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: .025em;
+			padding: 8px;
+			color: $accent-color;
+			border-radius: 5px;
+			border: 1px solid transparent;
+			cursor: pointer;
+		}
+	}
+}
+
+.show-by-active {
+	border: 1px solid $accent-color !important;
+}
+
+/*.footwear-select-detail {
+	width: 230px;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	overflow-y: hidden;
+	.panel-heading {
+		padding: 0;
+		border: none;
+		border-top-right-radius: 0 !important;
+	}
+	.panel-title {
+		background-color: #fff;
+		border: none;
+		a {
+			display: block;
+		}
+	}
+	.panel-group .panel + .panel {
+		margin-top: 0;
+	}
+	.panel-group {
+		border: none;
+		margin-bottom: 0;
+	}
+	.panel-default {
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid #eaeaea;
+		&:last-child {
+			border: none;
+		}
+	}
+	.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+		border: none;
+	}
+}*/
+
+.footwear-detail-accordeon {
+	width: 230px;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	margin-top: -60px;
+}
+
+.footwear-detail-collapse {
+	border-bottom: 1px solid #eaeaea;
+	a {
+		display: block;
+		position: relative;
+		padding: 20px;
+		font-family: GeometriaMedium;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: .025em;
+		&:hover {
+			color: inherit;
+		}
+		span {
+			display: none;
+			position: absolute;
+			content: '';
+			top: 40%;
+			right: 20px;
+			border: solid $accent-color;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.footwear-detail-content {
+	display: none;
+	padding: 0 20px 20px 20px;
+}
+
+.footwear-item-border {
+	@extend .footwear-item;
+	border: 1px solid #eaeaea;
+	margin-top: 0;
+	margin-bottom: 30px;
+	& div:last-child {
+		background-color: transparent;
+	}
+	&:hover {
+		border-color: transparent;
+		box-shadow: none;
+	}
+	&:hover .footwear-item-border-hover {
+		position: absolute;
+		top: 0;
+		bottom: -30px;
+		right: 0;
+		left: 0;
+		border: 1px solid #eaeaea;
+		box-shadow: 0 0 25px #e1e1e1;
+		border-radius: 5px;
+		z-index: 0;
+	}
+	& > a {
+		position: relative;
+		z-index: 10;
+	}
+}
+
+
+/* *** Slider Range UI *** */
+.range-slider {
+	width: 190px;
+	input {
+		width: 85px;
+		border: 1px solid #eaeaea !important;
+		border-radius: 4px;
+		padding: 7px;
+		margin-bottom: 20px;
+		font-family: Geometria;
+		font-size: 12px;
+		letter-spacing: .025em;
+		&:first-child {
+			float: left;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+	.ui-widget.ui-widget-content {
+		border: none;
+		border-radius: 0;
+		background-color: #efefef;
+		height: 5px;
+	}
+	.ui-widget-header {
+		background-color: $accent-color;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #fff;
+		border: 3px solid $accent-color;
+		cursor: pointer;
+	}
+	.ui-slider-horizontal .ui-slider-handle {
+		top: -.8em;
+	}
+}
+
+.footwear-detail-checkbox {
+	input {
+		margin-right: 10px;
+		vertical-align: middle;
+		margin-top: 0;
+	}
+	p {
+		font-family: Geometria;
+		font-size: 12px;
+		letter-spacing: .025em;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.select-size {
+	li {
+		text-align: center;
+		font-family: Geometria;
+		font-size: 12px;
+		letter-spacing: .025em;
+		list-style-type: none;
+		display: block;
+		float: left;
+		padding: 10px 0;
+		width: 38px;
+		border: 1px solid #eaeaea;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-right: calc((188px - (40px * 4)) / 3);
+		margin-bottom: 8px;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.size-inactive {
+	color: #d0d0d0;
+	pointer-events: none;
+}
+
+.size-active {
+	background-color: #f4f4f4;
+}
+
+.footwear-detail-btn {
+	a {
+		display: block;
+		@include buttons ($accent-color, transparent, $accent-color, '');
+		padding: 12px 0;
+		text-align: center;
+		margin: 20px;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
+.site-pagination {
+	text-align: center;
+	margin-top: 30px;
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin-bottom: 5px;
+		a {
+			display: block;
+			margin-left: 5px;
+			font-family: Geometria;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: .025em;
+			padding: 8px 12px;
+			color: $accent-color;
+			border-radius: 5px;
+			border: 1px solid transparent;
+		}
+	}
+}
+
+.pagination-active {
+	a {
+		border: 1px solid $accent-color !important;
 	}
 }
